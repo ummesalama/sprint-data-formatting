@@ -1,0 +1,513 @@
+Summary,Issue key,Issue id,Parent id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project description,Project url,Priority,Resolution,Assignee,Reporter,Creator,Created,Updated,Last Viewed,Resolved,Component/s,Due date,Votes,Labels,Labels,Description,Environment,Watchers,Watchers,Watchers,Watchers,Watchers,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Log Work,Original Estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Outward issue link (Cloners),Attachment,Attachment,Attachment,Attachment,Attachment,Custom field (Baseline end date),Custom field (Baseline start date),Custom field (Content type),Custom field (Development),Custom field (End date),Custom field (Epic Color),Custom field (Epic Link),Custom field (Epic Name),Custom field (Epic Status),Custom field (Feedback Due Date),Custom field (Incident End Time),Custom field (Incident Start Time),Custom field (Issue color),Custom field (Location),Custom field (Publication date),Custom field (Rank),Custom field (Request Type),Custom field (Request participants),Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Sprint,Custom field (Start date),Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Task progress),Custom field ([CHART] Date of First Response),Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment,Comment
+"Add device model & os version in the ""App version"" tab in the sales report.",SKTAPP-670,12292,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,zahidul,admin,admin,14/May/18 7:40 PM,08/Oct/18 10:56 AM,19/Dec/18 2:00 PM,07/Oct/18 3:18 PM,,,0,Backend,Retainer,"Add device model & os version in the ""App version"" tab in the sales report.",,admin,hasan.m.rahman,kafi,tasmia.safa,,;05/Jun/18 4:35 PM;kafi;3600,"Checked header data stored in preference
+
+It seems header data is obtained properly but server is not getting any data from header in android app
+
+Changed header key names according to server implementation
+
+Tested and reported;12/Aug/18 11:42 AM;zahidul;3600","Changed condition of storeHeaderInfo method so that when location is obtained from location API header info gets the update
+
+Applied the change in Splash and ChatActivity as well
+
+Tested and confirmed whether the data are reaching server and updating database
+
+Removed os name keyword from os version tab;03/Oct/18 6:01 PM;zahidul;3600","Added locationHelper instance that handles Google API connection and updates location data 
+
+Added method to update location with Google API connection 
+
+Enabled Google API connection in splash upon condition 
+
+Added public method to retrieve permission grant status in locationHelper class 
+
+Added public boolean method that returns permission grant status in PermissionUtils
+
+Check with server to verify whether location is updated or not;04/Oct/18 1:21 PM;zahidul;7200","Added IMEI as header information in check version API
+
+Tested with model server;04/Oct/18 6:00 PM;zahidul;3600",,,,,,,,,,,0,21600,,,0,21600,,,,,,,,,,,{},,,,,,,,,,,,0|hzzze7:,,,SKTAPP Sprint 14,SKTAPP Sprint 15,SKTAPP Sprint 16,SKTAPP Sprint 17,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,,,,,,,,,,2018-06-10 07:03:03.242,"10/Jun/18 1:03 PM;tasmia.safa;[~kafi] bhaiya, android phones are not showing the device model in the report.",06/Aug/18 10:46 AM;admin;[~zahidul] Device model is not coming for none of the android devices. Please check this.,16/Sep/18 2:19 PM;tasmia.safa;This has not been solved as of yet. Will have to get back to [~kafi] bhaiya to confirm this. ,03/Oct/18 12:28 PM;tasmia.safa;[~zahidul] bhaiya [~kafi] bhaiya this hasn't been solved. App does not update after loading the app every time.,"03/Oct/18 5:59 PM;hasan.m.rahman;[Mohammad Ullah Al Kafi|https://gitlab.com/kafi] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Backend|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Backend/commit/e3ecd5ad8f2e5ed1161a4dd6a358071177b85791]:
+'Update for SKTAPP-670 and log update'","04/Oct/18 9:46 AM;kafi;Last update pushed to production
+
+commit e3ecd5ad8f2e5ed1161a4dd6a358071177b85791
+
+Now IMEI also added at exported csv file and admin panel’s app version page. ([https://www.skitto.com/management/app_versions])
+
+app version and other information saving/updating at get_profile now. We will shift it to datamixer or version api soon due to reduce recurring call. 
+
+We should call it once in a journey.",04/Oct/18 4:14 PM;admin;[~kafi] As discussed Lets use the Version Check API to extract the device information instead of get Profile API. This will save a lot of db insert.,"04/Oct/18 5:09 PM;hasan.m.rahman;[Mohammad Ullah Al Kafi|https://gitlab.com/kafi] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Backend|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Backend/commit/a6f67a6afb33a47d822aca70d68e9a29d3881da1]:
+'Update for SKTAPP-670. moved at versioncheck API from get_profile'",07/Oct/18 3:18 PM;tasmia.safa;Added with the latest build. ,"08/Oct/18 10:56 AM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/6bb8f471f6e54403b4aebdbbbcdc70330d327dd8]:
+'User Device Info [SKTAPP-670]'","08/Oct/18 10:56 AM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/df4eadaf8dc2868149b0d7ebb10119a5389b0818]:
+'User Device Info [SKTAPP-670]'","08/Oct/18 10:56 AM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/6cece9fccbb4a92304b0038ba522651eb0beec02]:
+'User Device Info [SKTAPP-670]'",
+Update the sales app UI to support small screen.,SKTAPP-739,12416,,Task,Done,SKTAPP,Skitto App,software,admin,,,High,Done,zahidul,admin,admin,20/Jun/18 10:53 AM,19/Sep/18 3:40 PM,19/Dec/18 1:59 PM,19/Sep/18 3:40 PM,SalesApp,,0,Android,Retainer,"At this moment, the sales app is only supported in tabs. However we will need to extend the support to smaller screens. Please make the necessary changes so that the sales app works perfectly in smaller screens.",,admin,hasan.m.rahman,tasmia.safa,zahidul,,"Go through all layout files used in sales app and estimated approximate time to enable support for any screen sizes
+Added values file for different screen-size devices 
+Changed splash layout to support any screen size and tested in mobile and tab emulator;26/Jun/18 4:35 PM;zahidul;10800","Changed Login layout to support smaller screens according to previous design appearance in tab and wire-frame provided
+Changed Change password user name layout
+Changed Change Password OTP layout
+CHanged Change Password enter new password layout
+Changed Dashboard layout, create promo success layout
+Tested changes in smaller screens emulator (Pixel 2) and tab emulator (Nexus 10)
+Compared applied changes with wire-frame and existing application layout ;26/Jun/18 4:40 PM;zahidul;18000","Updated dashboard layout to support in smaller device
+
+Updated Home and Login layout to support smaller device
+
+Tested in moto G;09/Jul/18 5:37 PM;zahidul;7200","Created 3 emulator to check layout in a tab and a phone emulator, comparing with another tab emulator running the existing released build
+Changes made for smaller screen support was causing cropping and overlapping in several pages of tab, also contents looks noticeably larger than before
+Reduce dimension values of all related files hence, checked output on tab and phone also compared with the current release build's layout
+Added some drawable resources (cross button) which shrinks greatly in tab layout
+changed all dialog layouts to adjust in tab and device according to the requirement 
+Had to reduce dimension of almost all activity xml classes except SIM migration ;12/Jul/18 4:53 PM;zahidul;28800","Changed all fragment layouts to adjust in both tab and phone screen
+Reduced all textfield's length, height and margin 
+ExpiredFragment, SummaryFragment, SoldFragment's switch button alignment fixed
+Checked in test device and tablet
+;12/Jul/18 5:24 PM;zahidul;10800","Changed and checked dimension values in the following pages, Change Password OTP page, CHange password Username page, Homepage, Create Promo page;08/Aug/18 6:24 PM;zahidul;18000","Created new layout for SIM migration page's small screen support
+Added a drawable resource for editable text field
+Removed all label texts 
+Checked in in emulator;18/Sep/18 10:18 AM;zahidul;14400","Checked SIM migration layout in tab, layout breaks and crops at several place 
+Changed common width of migration form fro sw600dp and sw720dp
+Changed margins and padding of layout items
+Spinner height and padding changed for plans ""bondhu"", ""nishchinto"" etc..
+;18/Sep/18 1:16 PM;zahidul;7200",,,,,,,86400,0,115200,133%,86400,0,115200,,,18/Sep/18 3:43 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/10968/screenshot-1.png,18/Sep/18 3:44 PM;tasmia.safa;screenshot-2.png;https://skitto.atlassian.net/secure/attachment/10969/screenshot-2.png,,,,,,,{},,,SKTAPP-195,,,,,,,,,0|hzzzaf:,,,SKTAPP Sprint 16,SKTAPP Sprint 21,,,,,,,,,,,,,,,2018-07-12 11:05:55.743,"12/Jul/18 5:05 PM;tasmia.safa;[~zahidul] bhaiya the pages are too small and looks out of proportion, even for small phones. The pages that are too small and need to be made bigger are :
+
+1. The log in page 
+2. Create promo code page
+3. Change password page
+4. Success page of promo code creation
+
+5. In the sales report page:
+a. The button text of sales report  page (Go to sales report > pending > button text with ""sell SIM"" written on it)
+b. The text ""search by keyword"" inside the box in the sales report page (in all the states i.e pending, expired, sold
+c. The month date toggle button in the """"expired"", ""sold"" , ""summary"" states of the sales report page","12/Jul/18 5:23 PM;zahidul;[~tasmia.safa] apu the content of these layouts has been made smaller according to the existing release build. The contents will get smaller and larger with the device screen size. In existing design the contents are this small comparing to device screen, so for smaller screen the contents are getting smaller. I've checked the design files specially the CJM file that Musfiq vai provided few days back, the design is applicable for tabs only. These pages are designed following that wire-frame and the existing release build. To made any further changes here, I'll need mockup design for smaller screen, also I'll have to create separate layout file as well. [~admin] bhai please review this comment, also it'll be great if we can discuss this on next skype meeting.","06/Aug/18 10:22 AM;admin;Can you please check the design files & see if it serves your purpose or not.
+
+https://drive.google.com/drive/folders/1oKrkFq8liuH6MTLLDHlsTqQ_4rLYbUAH?usp=sharing","18/Sep/18 10:28 AM;zahidul;[~admin] bhai, I’ve prepared a build for Skitto Sales App, resolving this ticket. Kindly check and let me know your feedback as soon as possible.","18/Sep/18 1:19 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Sales_App_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Sales_App_Android/commit/397903a792b78418aece3db9079ae90e5f75a8c5]:
+'[SKTAPP-739]'","18/Sep/18 3:44 PM;tasmia.safa;Changes need to be made to the migration form of both the mobile and tab versions.
+
+1. The tab version of the migration form of sales app is not in proportion .  It needs to be in proportion to the tab size. Screenshot has been attached for reference. 
+ !screenshot-1.png|thumbnail! 
+
+
+2. Also, the mobile version form should be one size smaller than it already is.  Screenshot has been attached. 
+
+ !screenshot-2.png|thumbnail! 
+",19/Sep/18 12:20 PM;tasmia.safa;[~zahidul] bhaiya the app in tab is crashing repeatedly right after I give the log in credentials. ,19/Sep/18 3:40 PM;tasmia.safa;Solved in the build provided on 19th September. ,,,,,
+"Update the lat, long of the device in certain Interval from the sales app.",SKTAPP-741,12419,,Story,Done,SKTAPP,Skitto App,software,admin,,,High,Done,admin,admin,admin,20/Jun/18 11:11 AM,17/Dec/18 1:21 PM,19/Dec/18 1:59 PM,17/Dec/18 1:21 PM,SalesApp,,0,Android,Retainer,"We will need to track all of our POS (Point of Sales) location. The sales app should call a location update API in a certain interval & update the lat,long of the seller.",,admin,flora,,,,,,,,,,,,,,,,,,,,,,57600,0,64800,,,,,,,,,,,{},,,SKTAPP-740,,,,,,,,,0|i00be7:,,,SKTAPP Sprint 16,SKTAPP Sprint 17,SKTAPP Sprint 18,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,SKTAPP Sprint 22,SKTAPP Sprint 23,SKTAPP Sprint 24,SKTAPP Sprint 25,SKTAPP Sprint 26,,,,,,2018-10-25 05:54:03.332,25/Oct/18 11:54 AM;flora;This task is done in Production,,,,,,,,,,,,
+An API to update the location of the seller from sales app.,SKTAPP-742,12420,12419,Sub-task,Done,SKTAPP,Skitto App,software,admin,,,High,Done,kafi,admin,admin,20/Jun/18 11:16 AM,25/Oct/18 11:52 AM,19/Dec/18 1:59 PM,25/Oct/18 11:52 AM,SalesApp,,0,Backend,Retainer,"We will need to create an API which will receive the lat, long & update_timestamp from the sales app & store it in the ""seller details"" in the database.",,admin,flora,kafi,,,"Seller location saving at database after calling this API
+If seller location change, existing record updating. 
+Inserting for new seller id with date and time.
+
+API details at API document
+https://docs.google.com/spreadsheets/d/1MluSMl34ZGBaAtpu6T_gTNTkxj9EyCaNIQ2_FLtaK-0/edit#gid=0;09/Jul/18 8:24 PM;kafi;7200",,,,,,,,,,,,,,,0,7200,,,0,7200,,,,,,,,,,,{},,,,,,,,,,,,0|i00bef:,,,SKTAPP Sprint 16,SKTAPP Sprint 17,SKTAPP Sprint 18,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,SKTAPP Sprint 22,SKTAPP Sprint 23,SKTAPP Sprint 24,SKTAPP Sprint 25,SKTAPP Sprint 26,,,,,,2018-07-22 10:22:24.749,"22/Jul/18 4:22 PM;kafi;There is no UI/Pages to see the location records till now. Please check at ""seller_location"" table at database",17/Oct/18 5:10 PM;flora;This task is done in model,25/Oct/18 11:52 AM;flora;This task is done in Production,,,,,,,,,,
+Create a service which will call the locationupdate api in certain interval.,SKTAPP-743,12421,12419,Sub-task,Done,SKTAPP,Skitto App,software,admin,,,High,Done,zahidul,admin,admin,20/Jun/18 11:47 AM,25/Oct/18 11:51 AM,19/Dec/18 1:58 PM,25/Oct/18 11:51 AM,SalesApp,,0,Android,Retainer,"Create a service which will call the locationupdate api in certain interval. The api will expect the following parameters - lat, long & timestamp.
+
+Also ideally if we can somehow make the interval configurable from server side.
+
+The API will be called & the location will be updated every time the app is loaded or taken in the foreground. If the app remains in the foreground for a longer time then the API will be called at a certain interval which will be configurable from server side.
+
+If the app goes to background or killed from background then the API wont be called any more.",,admin,flora,hasan.m.rahman,,,"Did some research on how to implement this feature
+
+Created a sample project to check if alarm manager can do the interval call
+
+Observation, alarmmanager can do the job but it seems alarmmanager does not invoke in exact interval a five minutes interval will work fine though
+
+Tried to invoke API in broadcastreceiver worked as well.
+
+Now need to implement a service which will manage alarmmanager and it’s broadcast;12/Jul/18 5:28 PM;zahidul;7200","Added AlarmManagerBroadcastReceiver in sales app
+
+Added GPSTracker methods to get GPS location In SplashActivity Location permission is asked 
+
+Started alarmManager with login in app
+
+Tried to test but dev server was down;16/Jul/18 2:47 PM;zahidul;14400","Tested API implementation with backend
+Data was not updating in server
+Changed API implementation from form data to raw json string
+Service broadcast to update location was not initiating while app is no longer in stack
+Added wake lock along with alarm manager to acquire context to initiate the broadcast
+;22/Jul/18 11:19 AM;zahidul;14400","Separated GPSTracker location listener and update location API request from AlarmManagerBroadcastReceiver
+Added some try-catch blocks to identify a warning exception and handle the scenario
+Added an intent service named LocationIntentService, added GPSTracker related code snippet on onHandleIntent() method
+Added API call for update location in LocationIntentService
+Changed setAlarm() method invocation workflow;18/Sep/18 6:31 PM;zahidul;14400","Added SalesApplication class extending Application
+
+Added application name in manifest
+
+Added SkittoSalesLifeCycleListener that overrides onMoveToForeground and onMoveToBackground callbacks, that detects whether application is in foreground or background
+
+Invoked LocationIntentService from onMoveToForeground to update location when application is brought into foreground from background
+
+Tested if location is updating when application is foreground;17/Oct/18 4:04 PM;zahidul;7200",,,,,,,,,,57600,0,57600,100%,57600,0,57600,,,,,,,,,,,{},,,,,,,,,,,,0|i00ben:,,,SKTAPP Sprint 16,SKTAPP Sprint 17,SKTAPP Sprint 18,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,SKTAPP Sprint 22,SKTAPP Sprint 23,SKTAPP Sprint 24,SKTAPP Sprint 25,SKTAPP Sprint 26,,,,,,2018-09-18 12:31:17.031,"17/Sep/18 10:26 AM;admin;[~zahidul] The task details is updated. Here is the updated requirement.
+
+The API will be called & the location will be updated every time the app is loaded or taken in the foreground. If the app remains in the foreground for a longer time then the API will be called at a certain interval which will be configurable from server side.
+
+If the app goes to background or killed from background then the API wont be called any more.","18/Sep/18 6:31 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Sales_App_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Sales_App_Android/commit/1cafb2798c3965eca0d58f3286dd3d80b6b8ab97]:
+'[SKTAPP-743]'","16/Oct/18 4:50 PM;flora;# App login \- Sent information
+# App logout \- No information
+# App background/Closed \-No information
+# App background to foreground \- No information
+# App close to Open \- Sent information 
+
+
+
+Here the 4 no is an issue . It should send information","17/Oct/18 4:21 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Sales_App_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Sales_App_Android/commit/c958a8acd57b9a1720fafbdfce1409fb57cbe1ac]:
+'[SKTAPP-992] Configuration change'",17/Oct/18 5:10 PM;flora;This task is done in model,25/Oct/18 11:51 AM;flora;This task is done in Production,,,,,,,
+iOS - R&D about Jenkins and its integration,SKTAPP-794,12501,,Task,In Progress,SKTAPP,Skitto App,software,admin,,,Medium,,saifur,saifur,saifur,12/Jul/18 5:29 PM,15/Oct/18 10:50 AM,19/Dec/18 1:44 PM,,,,0,iOS,Retainer,,,saifur,,,,,R&D about Jenkins and its integration with iOS.;15/Jul/18 5:54 PM;saifur;14400,"Researched on how to install jenkins on mac.
+Installed it on mac.
+Started jenkins server.
+Added XCode and Bitbucket plugin.;30/Aug/18 5:19 PM;saifur;14400","set up a new job in jenkins.
+added git repository in jenkins.;11/Sep/18 5:29 PM;saifur;14400","set up  xcode plugin in jenkins,
+R&D about jenkins deployment.;11/Sep/18 5:29 PM;saifur;14400",Setup Xcode integration settings.;16/Sep/18 5:16 PM;saifur;14400,"Tried building multiple times.
+User account problem.
+Created new user.;16/Sep/18 5:16 PM;saifur;14400","Tried multiple times to build.
+Not found provisioning profiles in the keychain.
+Solved that.
+Failed with ""Code signing is required for product type 'Application' in SDK 'iOS 11.4'"".
+More research needed for the error.;16/Sep/18 5:18 PM;saifur;14400",Tried 2 different Apple Accounts. Created new distribution certificates. Showing “Your session has expired. Please log in again”. Have to investigated further.;15/Oct/18 10:50 AM;saifur;14400,,,,,,,,0,115200,,,0,115200,,,,,,,,,,,{},,,,,,,,,,,,0|hzzzav:,,,SKTAPP Sprint 17,SKTAPP Sprint 19,SKTAPP Sprint 21,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Android: Implement a pop up to prompt the user to turn off pay as you go when they go to data dashboard.,SKTAPP-914,12782,,Story,Done,SKTAPP,Skitto App,software,admin,,,High,Done,zahidul,admin,admin,16/Sep/18 3:34 PM,27/Sep/18 11:00 AM,19/Dec/18 1:42 PM,27/Sep/18 11:00 AM,data,,0,Android,Retainer,"We will need to implement a pop up to prompt the user to turn pay as you off when they go to data dashboard. 
+The pop will have 3 options:
+1. Turn off pay as you go 
+2. Keep pay as you go on.
+3. Using cross to button to close the pop up.
+
+The user will see the pop up when they go to data dashboard & if the following conditions are met.
+1. Pay as you go is turned on.
+2. User didnt see the pop up earlier or chose the cross button to close the pop up before.
+
+The details CJM is available here,:
+https://www.draw.io/?state=%7B%22ids%22:%5B%2219bX9f6z-dNnj9t3i_puCZgOmF53VFW81%22%5D,%22action%22:%22open%22,%22userId%22:%22103850237171035738819%22%7D#G19bX9f6z-dNnj9t3i_puCZgOmF53VFW81",,admin,hasan.m.rahman,tasmia.safa,,,"Created dialog layout as required for the feature 
+
+Added a global flag in preference to store dialog shown status 
+
+Added a local flag in DataFragment to check if dialog was shown after once fragment is resumed 
+
+Shown dialog according to required condition 
+
+Found a glitch that is when called from drawer DataFragment is initiated twice
+
+Added functionality to disable pay as you go from dialog button event;20/Sep/18 11:41 AM;zahidul;18000","Resolved a glitch that was causing the pay go dialog to appear twice every time the dataFragment is called from drawer menu
+
+Tested several cases to check dialog appearing behavior 
+
+Logged out and updated app from playstore to check if the dialog comes up;20/Sep/18 11:45 AM;zahidul;5400","Changed button text for the dialog when user presses keep it on
+
+Optimize script and removed some redundant code 
+
+Reported, committed and resolved;24/Sep/18 6:03 PM;zahidul;3600",,,,,,,,,,,,,0,27000,,,0,27000,,,24/Sep/18 5:06 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/11007/screenshot-1.png,,,,,,,,{},,,,,,,,,,,,0|hzzzbn:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-09-20 07:14:24.681,"20/Sep/18 1:14 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/ac4ea35ab60eece6da8b537f5bdafa18a88bcfe3]:
+'Pay As you go dialogs [SKTAPP-914]'","24/Sep/18 11:40 AM;tasmia.safa;[~zahidul] bhaiya the pay as you go pop up appeared in the sms bot as well. Happened only once. 
+1. The app was already open in the background.
+2. Was doing the deep linking test so clicked on the facebook add for the sms deeplinking
+3. It took me to the sms bot
+4. The pop up appeared in the sms bot","24/Sep/18 5:07 PM;tasmia.safa;[~zahidul] bhaiya the buttons are opposite to what you have designed. The required design is attached.  Also, there will be a full stop after the word the end of the body copy.
+
+  !screenshot-1.png|thumbnail! !screenshot-1.png|thumbnail! ","24/Sep/18 6:07 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/938e3680d603ad39df94349f99f5fbcc23d4b0e2]:
+'PAY go dialogs [SKTAPP-914]'",27/Sep/18 11:00 AM;tasmia.safa;Feature added to the latest build.,,,,,,,,
+iOS: Implement a pop up to prompt the user to turn off pay as you go when they go to data dashboard.,SKTAPP-915,12783,,Story,Done,SKTAPP,Skitto App,software,admin,,,High,Done,saifur,admin,admin,16/Sep/18 3:37 PM,07/Oct/18 3:17 PM,19/Dec/18 1:42 PM,07/Oct/18 3:17 PM,data,,0,iOS,Retainer,"We will need to implement a pop up to prompt the user to turn pay as you off when they go to data dashboard. 
+The pop will have 3 options:
+1. Turn off pay as you go 
+2. Keep pay as you go on.
+3. Using cross to button to close the pop up.
+
+The user will see the pop up when they go to data dashboard & if the following conditions are met.
+1. Pay as you go is turned on.
+2. User didnt see the pop up earlier or chose the cross button to close the pop up before.
+
+The details CJM is available here,:
+https://www.draw.io/?state=%7B%22ids%22:%5B%2219bX9f6z-dNnj9t3i_puCZgOmF53VFW81%22%5D,%22action%22:%22open%22,%22userId%22:%22103850237171035738819%22%7D#G19bX9f6z-dNnj9t3i_puCZgOmF53VFW81",,admin,hasan.m.rahman,tasmia.safa,,,Added popup to Data dashboard.;20/Sep/18 4:53 PM;saifur;14400,"Added code for showing and hiding.
+
+Added exceptional case for refreshing data dashboard.;20/Sep/18 4:53 PM;saifur;14400","Added Popup for Turn it off state.
+
+implemented codes to handle popup;24/Sep/18 5:35 PM;saifur;14400","Added popup for “keep it on” status.
+
+Implemented code for handling popup.;24/Sep/18 5:36 PM;saifur;14400",Fixed label gaps.;01/Oct/18 4:46 PM;saifur;3600,"Changed the popup titles in Emergency loan to “oops\!”
+
+Changed button title of the popup to “ugh, take me back”;02/Oct/18 6:25 PM;saifur;3600",,,,,,,,,,0,64800,,,0,64800,,SKTAPP-914,,,,,,,,,{},,,,,,,,,,,,0|i00dlb:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-09-19 12:31:30.534,"19/Sep/18 6:31 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/04faa620700e8b37f4d5e09dc3f693c0ae5e35d1]:
+'JIRA Ticket: SKTAPP-915'","24/Sep/18 6:45 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/bf55a6f410dfc7bad3aad04116ae0ea691367ab7]:
+'JIRA Ticket: SKTAPP-915'","26/Sep/18 6:37 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/b8aa8abac5112aa13715cd86f39a12a98d387fd3]:
+'JIRA Ticket: SKTAPP-915'","02/Oct/18 6:23 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/69d9c225b722a500aba840f8c511cee443a2ea84]:
+'JIRA Ticket: SKTAPP-880'",07/Oct/18 3:17 PM;tasmia.safa;Added to the latest build. ,,,,,,,,
+Implement POS Tracking functionality.,SKTAPP-916,12785,,Story,In Progress,SKTAPP,Skitto App,software,admin,,,High,,abid.khan,admin,admin,16/Sep/18 4:45 PM,09/Dec/18 5:01 PM,19/Dec/18 1:41 PM,,Admin Panel,,0,Backend,Retainer,"We will need to implement POS tracking functionality in the sales app. There will be an admin panel where we can track the locations of POS, identify the active, idle & inactive users. Also view the historical data of the POS.
+
+The details requirement can be found below:
+https://skitto.atlassian.net/wiki/spaces/NF/pages/470056961?atlOrigin=eyJpIjoiZjRlNjRkYzA4OGQ5NDY5ZmFhZWY3YjY0NDA3ZmVmNWMiLCJwIjoiYyJ9",,admin,kafi,,,,;14/Oct/18 2:31 PM;abid.khan;108000,merging all the records and functions.;15/Oct/18 6:07 PM;abid.khan;21600,trying to work with direction api (for testing purpose). also done seller with date filter.;16/Oct/18 8:40 PM;abid.khan;18000,some organizingo.. but not yet completed;17/Oct/18 5:26 PM;abid.khan;3600,working for date range report generation.;21/Oct/18 6:11 PM;abid.khan;7200,solving date range search which takes my 12\+ productive hours;25/Oct/18 5:21 PM;abid.khan;10800,adding total ga info and made a function to get map marker.;29/Oct/18 2:16 PM;abid.khan;10800,remake the initial page;30/Oct/18 10:26 AM;abid.khan;10800,making pos tracker file based..;30/Oct/18 6:11 PM;abid.khan;25200,;01/Nov/18 5:24 PM;kafi;3600,implementing file based;13/Nov/18 10:42 AM;abid.khan;14400,;13/Nov/18 3:47 PM;abid.khan;7200,added total ga and waiting time.;04/Dec/18 6:05 PM;abid.khan;14400,slight changes in front end.. and R&D for how waiting time can be implemented.;05/Dec/18 1:36 PM;abid.khan;10800,,0,266400,,,0,266400,,,,,,,,,,,{},,,SKTAPP-740,,,,,,,,,0|i00e9j:,,,SKTAPP Sprint 21,SKTAPP Sprint 22,SKTAPP Sprint 23,SKTAPP Sprint 24,SKTAPP Sprint 25,SKTAPP Sprint 26,,,,,,,,,,,2018-11-01 11:24:15.988,01/Nov/18 5:24 PM;kafi;POS location pointed on map. (status marking on gmap),,,,,,,,,,,,
+Integrate FB chat bot using dialogflow,SKTAPP-918,12787,,Story,To Do,SKTAPP,Skitto App,software,admin,,,Highest,,faiyaz,admin,admin,16/Sep/18 5:17 PM,16/Sep/18 5:17 PM,19/Dec/18 1:41 PM,,,,0,Retainer,,"We will have to implement chatbot using dialogflow. We are current using chat fuel for the fb chatbot. We have to move to dialogflow as it is a free tool & supports better ai & ml.
+
+The details can be found here:
+https://dialogflow.com/",,abid.khan,admin,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,{},,,,,,,,,,,,0|hzzzbh:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Bkash Integration in our app.,SKTAPP-919,12788,,Epic,To Do,SKTAPP,Skitto App,software,admin,,,Highest,,,admin,admin,16/Sep/18 5:20 PM,24/Sep/18 3:14 PM,19/Dec/18 1:41 PM,,reload,,0,Retainer,,"We will have to integrate bkash in our app. Bkash has already shared their integration guideline. 
+
+Please find below are the necessary information related to bKash Payment Gateway:
+
+1.       Developer Portal (detail Product, workflow, API information): https://developer.bka.sh/ 
+2.       Checkout Demo: https://merchantdemo.sandbox.bka.sh/frontend/ 
+a.       Wallet number-01770618575
+b.      Pin-12121
+c.       OTP-123456
+3.	bKash PGW integration supports different modes of payments (e.g. USSD, Mobile App, QR) 
+a.	You need to consider integrating with our WebHook product for this purpose
+4.       Github (https://github.com/bKash-developer) for required guideline in developer portal
+5.	Sandbox credentials: :  “@cce$$”
+
+From integration perspective, we have to go through following steps:
+•         Step 1: Merchant is offered Sandbox credential for testing
+•         Step 2: Merchant confirms development readiness using sandbox
+•         Step 3: bKash accepts formal sandbox test results by merchant
+•         Step 4: merchant shares necessary info (logo, etc.)
+•         Step 5: bKash provisions merchant in the payment gateway
+•         Step 6: Merchant UAT conducted using production account
+•         Step 7: bKash accepts production test results by merchant, and proceeds for go-live
+
+
+
+",,admin,,,,,,,,,,,,,,,,,,,,,,,,,,,,17/Sep/18 10:44 AM;admin;bKash Checkout API Integration Guide.docx;https://skitto.atlassian.net/secure/attachment/10962/bKash+Checkout+API+Integration+Guide.docx,,,,,,,,{},,ghx-label-11,,Bkash Integration,To Do,,,,,,,0|i00dlr:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Store 7 days POS location data for all the sellers.,SKTAPP-923,12795,,Task,Resolved,SKTAPP,Skitto App,software,admin,,,High,,kafi,admin,admin,17/Sep/18 10:32 AM,09/Dec/18 5:01 PM,19/Dec/18 1:41 PM,,SalesApp,,0,Backend,Retainer,We have to store 7 days location data & display it in the interface. Please make sure that we change the data storing mechanism accordingly.,,admin,kafi,,,,;16/Oct/18 4:33 PM;kafi;10800,,,,,,,,,,,,,,,0,10800,,,0,10800,,,,,,,,,,,{},,,SKTAPP-740,,,,,,,,,0|i00ea6:,,,SKTAPP Sprint 21,SKTAPP Sprint 22,SKTAPP Sprint 23,SKTAPP Sprint 24,SKTAPP Sprint 25,SKTAPP Sprint 26,,,,,,,,,,,2018-10-16 10:32:52.787,"16/Oct/18 4:32 PM;kafi;Sellers data storing at a local table and showing at admin page. Source code updated at model server
+
+URL: [h|https://dev.skitto.com/management/seller-track]ttps://dev.skitto.com/management/seller-track
+
+Menu link: “Seller Track”",,,,,,,,,,,,
+"iOS - Add, modify headers on api/s of selfcare app",SKTAPP-969,12873,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,admin,saifur,saifur,04/Oct/18 6:40 PM,19/Dec/18 10:14 AM,19/Dec/18 2:00 PM,09/Oct/18 11:02 AM,,,0,iOS,Retainer,,,hasan.m.rahman,saifur,tasmia.safa,,,moved location detection code upper in the code cycle. Added When in use location permission. added delay before calling version check api.;04/Oct/18 6:49 PM;saifur;14400,Investigated on the issue of no location incoming in header of version check api.;07/Oct/18 5:19 PM;saifur;7200,,,,,,,,,,,,,,0,21600,,,0,21600,,,,,,,,,,,{},,,,,,,,,,,,0|i00e3r:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-10-04 12:46:12.963,"04/Oct/18 6:46 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/00abc00873eff75b61bf698662d07c5e2a13ca62]:
+'JIRA TICKET: SKTAPP-969'","09/Oct/18 11:01 AM;tasmia.safa;Solved in the latest build. 
+
+Added parameters :
+1. OS	
+2. OS Version	
+3. App Version	
+4. Device Model	
+
+Note: IMEI cannot be fixed in iphone. ",,,,,,,,,,,
+Add IMEI number with other device and app related information for android,SKTAPP-956,12860,,Task,Done,SKTAPP,Skitto App,software,admin,,,High,Done,zahidul,zahidul,zahidul,03/Oct/18 3:53 PM,19/Dec/18 10:38 AM,19/Dec/18 2:00 PM,07/Oct/18 3:16 PM,,,0,Android,Retainer,"Add IMEI number for android device
+Store IMEI number and send to server with API",,hasan.m.rahman,tasmia.safa,zahidul,,,"Added method in Splash and Chat Activity to retrieve IMEI number
+
+Added permission in manifest
+
+Added request permission handler to get phone state
+
+Added condition to request permission dialog to retrieve phone_state
+
+Added header key for IMEI and implemented for getProfile API server request;03/Oct/18 4:11 PM;zahidul;10800",,,,,,,,,,,,,,,0,10800,,,0,10800,,,,,,,,,,,{},,,,,,,,,,,,0|i00e0v:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-10-03 10:11:57.383,"03/Oct/18 4:11 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/d47229777e6850c0740bd0d20048a64cb4a9a8c0]:
+'ADD IMEI [SKTAPP-956]'",07/Oct/18 3:16 PM;tasmia.safa;Added ti the latest build. ,,,,,,,,,,,
+Android: Pop up text of emergency loan when the mnp port out flag is on,SKTAPP-946,12847,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,zahidul,tasmia.safa,tasmia.safa,30/Sep/18 4:45 PM,19/Dec/18 12:36 PM,19/Dec/18 2:00 PM,02/Oct/18 5:33 PM,,,0,Android,Retainer,"Pop up text of emergency loan when the mnp port out flag is on.
+
+*Header*: ""oops!""
+*Body*: you cannot take emergency loan since you have already requested to port out from skitto
+*Button*: ugh, take me back",,hasan.m.rahman,tasmia.safa,zahidul,,,Portout condition checked and emergency loan page’s title and description set accordingly;01/Oct/18 5:39 PM;zahidul;7200,"Dialog added with specific message for port out
+Parsed response for port out MSISDN and applied condition to show dialog
+
+Tested with production MSISDN and failed as the production server wasn’t updated
+
+Tested in model platform re-organized the conditions applied and debugged and prepared build for test;01/Oct/18 5:41 PM;zahidul;10800","According to QA report emergency loan pop up appears twice at a time
+
+Investigated the reason and find out if emergency loan is browsed from drawer menu the fragment is loaded twice
+
+Setting specific position for the pager invoke pager change listener which also initiate the EmergencyLoan page
+
+Therefore, disabled EmergencyLoan fragment initialization at menu item click listener;02/Oct/18 6:02 PM;zahidul;7200",,,,,,,,,,,,,0,25200,,,0,25200,,SKTAPP-945,,,,,,,,,{},,,SKTAPP-937,,,,,,,,,0|i00dyf:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-09-30 11:18:45.83,"30/Sep/18 5:18 PM;zahidul;This is what we have to show in dialog, I was wondering what will we show in the emergency loan page, when user MSISDN is portout? [~tasmia.safa] apu","30/Sep/18 5:54 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/2014eded37978694d14dd44ecd4c53ad1cf51e03]:
+'Remodeling Skitto [SKTAPP-946]'",01/Oct/18 10:43 AM;tasmia.safa;[~zahidul] bhaiya the actual emergency page will have no design change. A pop up will only be added after the user has requested for port out. ,"01/Oct/18 5:37 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/cce7a62d6864d188a3df8896bc25a883095ec140]:
+'MNP Skitto [SKTAPP-946]'","02/Oct/18 10:43 AM;tasmia.safa;[~zahidul] bhaiya pressing either the cross or the button of the pop up takes back to the balance page but the pop up appears again after landing on the balance page., which shouldn't happen.",02/Oct/18 5:33 PM;tasmia.safa;Solved in the latest production build.,"03/Oct/18 4:11 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/e25419a547af7b8e67b07dbb21bae7a07081985e]:
+'port out pop up[SKTAPP-946]'","23/Oct/18 10:38 AM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/ffc508f11037a0078c1cac7283aef9f9443cd58c]:
+'Remodeling Skitto [SKTAPP-946]'",,,,,
+ios: Pop up text of emergency loan when the mnp port out flag is on,SKTAPP-945,12846,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,saifur,tasmia.safa,tasmia.safa,30/Sep/18 4:45 PM,19/Dec/18 12:36 PM,19/Dec/18 2:00 PM,02/Oct/18 3:49 PM,,,0,iOS,Retainer,"Pop up text of emergency loan when the mnp port out flag is on.
+
+*Header*: ""oops!""
+*Body*: you cannot take emergency loan since you have already requested to port out from skitto
+*Button*: ugh, take me back",,hasan.m.rahman,tasmia.safa,,,,"Added popup for Portout Case.
+Added functionality for Close button and ""okay, take me back"" button.
+;01/Oct/18 4:42 PM;saifur;14400",,,,,,,,,,,,,,,0,14400,,,0,14400,,,,,,,,,,,{},,,SKTAPP-937,,,,,,,,,0|i00dy7:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-10-01 11:24:25.113,"01/Oct/18 5:24 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/e48706e6bea9036425bc202d65e277e1cf42f0ed]:
+'JIRA TICKETS: SKTAPP-880'","02/Oct/18 11:02 AM;tasmia.safa;[~saifur] bhaiya button text should be ""ugh, take me back"".",02/Oct/18 3:49 PM;tasmia.safa;Solved in production.,,,,,,,,,,
+Need design for bkash pop up,SKTAPP-941,12837,,Task,To Do,SKTAPP,Skitto App,software,admin,,,High,,nayeem,tasmia.safa,tasmia.safa,24/Sep/18 3:14 PM,19/Dec/18 12:38 PM,19/Dec/18 2:00 PM,,,,0,Design,Retainer,"Need design for bkash pop up. Screenshot of the sample design is attached.  
+
+ 
+
+ !screenshot-1.png|thumbnail! 
+
+",,admin,nayeem,samanta.s.tira,tasmia.safa,,,,,,,,,,,,,,,,,,,,,,,,,03/Oct/18 5:02 PM;samanta.s.tira;Picture1.png;https://skitto.atlassian.net/secure/attachment/11031/Picture1.png,04/Oct/18 11:19 AM;nayeem;reload-balance-popup-v2.png;https://skitto.atlassian.net/secure/attachment/11033/reload-balance-popup-v2.png,02/Oct/18 10:52 AM;nayeem;reload-balance-popup.png;https://skitto.atlassian.net/secure/attachment/11025/reload-balance-popup.png,24/Sep/18 3:22 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/11005/screenshot-1.png,,,,,{},,,SKTAPP-919,,,,,,,,,0|i00dwf:,,,SKTAPP Sprint 21,,,,,,,,,,,,,,,,2018-10-02 04:53:21.732,24/Sep/18 3:26 PM;tasmia.safa;[~nayeem] bhaiya please use the usual skitto colors and font as the attached screenshot may not be accurate. ,"02/Oct/18 10:53 AM;nayeem;!reload-balance-popup.png|thumbnail! 
+
+[~tasmia.safa]",03/Oct/18 9:52 AM;admin;[~samanta.s.tira] can u pls check this & give ur feedback.,"03/Oct/18 10:06 AM;samanta.s.tira;The pop up looks good, although we have never used such colorful buttons in a pop up before. However my concern is with the line “to use flexiload”. It’s showing underneath the pop up. Is that how it’s supposed to be? [~admin] 
+
+
+
+As for the colors, I will just confirm with Ishtiaque bhaiya.","03/Oct/18 10:27 AM;admin;[~samanta.s.tira] No the text is supposed to be part of the pop up. [~nayeem] Can you pls fix the design here.
+
+Also [~samanta.s.tira] Please confirm the button orders after discussing with the stakeholders.","03/Oct/18 5:02 PM;samanta.s.tira;[~nayeem] bhaiya please find the feedback attached:
+
+!Picture1.png|thumbnail!","04/Oct/18 11:19 AM;nayeem;!reload-balance-popup-v2.png|thumbnail! 
+
+[~samanta.s.tira]",04/Oct/18 11:20 AM;nayeem;[https://www.dropbox.com/s/yp5z5kxvpuiq8d5/reload-balance-popup v2.psd?dl=0|https://www.dropbox.com/s/yp5z5kxvpuiq8d5/reload-balance-popup%20v2.psd?dl=0] → link to the file,,,,,
+iOS- Here is the balance page design for different sim states,SKTAPP-880,12601,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,tasmia.safa,tasmia.safa,tasmia.safa,13/Aug/18 10:45 AM,18/Dec/18 3:09 PM,19/Dec/18 2:00 PM,09/Oct/18 10:56 AM,balance,,0,iOS,Retainer," [^balance page SIM status design_v7.zip] 
+
+Please find the attachment for balance page design for inactive, blocked or expired state.",,admin,hasan.m.rahman,tasmia.safa,,,Added top view for showing status. added code for font management.;26/Sep/18 6:38 PM;saifur;14400,Design and implementation added for BLOCKED and ACTIVE STATUS.;27/Sep/18 5:58 PM;saifur;14400,Design and implementation for status INACTIVE and EXPIRED is done.;27/Sep/18 5:58 PM;saifur;14400,"added popup for SIM unblocking. added tap gesture for ""tap here to unblock"".;30/Sep/18 7:38 PM;saifur;14400",Added sim unblocking function.;30/Sep/18 7:38 PM;saifur;3600,"Added functionlity of blocking.
+Added popup for Password Check.
+Added popup for Facebook Login check;01/Oct/18 4:49 PM;saifur;14400","moved code from after Balance API called to Before balance API called
+
+Tested with different state msisdns.;02/Oct/18 6:29 PM;saifur;3600",Added code for refreshing the balance page after successful sim unblock.;04/Oct/18 6:48 PM;saifur;3600,Backup code added in case of empty response in Get Accounts while the user is in EXPIRED or INACTIVE state.;07/Oct/18 5:17 PM;saifur;7200,,,,,,,0,90000,,,0,90000,,SKTAPP-879,14/Aug/18 4:11 PM;tasmia.safa;balance page SIM status design_v7.zip;https://skitto.atlassian.net/secure/attachment/10924/balance+page+SIM+status+design_v7.zip,03/Oct/18 3:41 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/11029/screenshot-1.png,,,,,,,{},,,,,,,,,,,,0|i00cif:,,,SKTAPP Sprint 20,SKTAPP Sprint 21,,,,,,,,,,,,,,,2018-09-27 11:52:30.664,"27/Sep/18 5:52 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/70aca3b44b56be6e7e065806eef764acbfb92a38]:
+'Jira Ticket: SKTAPP-880'","30/Sep/18 11:12 AM;tasmia.safa;[~saifur] bhaiya, the ""here""  in the line ""Tap *here* to unblock"" when the *sim is blocked* is not working. ",30/Sep/18 1:35 PM;tasmia.safa;[~saifur] bhaiya the app crashes every time I log in with an inactive MSISDN.,"30/Sep/18 7:38 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/2fa79ae3732c940c5bee873975202129f2eb6e38]:
+'JIRA Ticket: SKTAPP-880'","01/Oct/18 5:24 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/e48706e6bea9036425bc202d65e277e1cf42f0ed]:
+'JIRA TICKETS: SKTAPP-880'","02/Oct/18 6:22 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/69d9c225b722a500aba840f8c511cee443a2ea84]:
+'JIRA Ticket: SKTAPP-880'","03/Oct/18 3:41 PM;tasmia.safa;[~saifur] Bhaiya the inactive state should say ""expired at"" 
+
+ !screenshot-1.png|thumbnail! ","04/Oct/18 6:46 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/00abc00873eff75b61bf698662d07c5e2a13ca62]:
+'JIRA TICKET: SKTAPP-969'","07/Oct/18 5:22 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/8998be832f6984098f5d8827264a34b2a23ea3a3]:
+'JIRA Ticket: SKTAPP-880'","07/Oct/18 5:38 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/73ff622fca33a21d7232b9c1f017734d7b3ab7a7]:
+'JIRA Ticket: SKTAPP-880'","07/Oct/18 6:03 PM;hasan.m.rahman;[Saifur Rahman|https://gitlab.com/saifur_ios] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_iOS|https://gitlab.com/ErgoV_Team_Skitto/Skitto_iOS/commit/6ec43fd98a8b66d40abd67467541b2734b8c2a41]:
+'JIRA Ticket: SKTAPP-880'",09/Oct/18 10:45 AM;admin;[~tasmia.safa] Pls test & close this.,09/Oct/18 10:56 AM;tasmia.safa;Solved in the 2.3.0 version of the build. 
+Android: need URL for app to deep link on Facebook ads,SKTAPP-849,12569,,Task,Done,SKTAPP,Skitto App,software,admin,,,Medium,Done,zahidul,samanta.s.tira,admin,06/Aug/18 10:17 AM,07/Oct/18 2:52 PM,19/Dec/18 2:00 PM,07/Oct/18 2:52 PM,,,0,Android,Retainer,"We will be running app engagement ads on Facebook with deep links to certain parts of our skitto app.
+
+For that we will be needing links for each feature so that when users click the CTA on the facebook ad, they are taken straight to that feature within the skitto app. 
+
+https://developers.facebook.com/docs/applinks 
+
+ !photo6188100060609357891.jpg|thumbnail! 
+
+Also, we need to figure out how the FB SDK works so that we can identify all the app users within Facebook",,admin,flora,hasan.m.rahman,tasmia.safa,zahidul,"Configured facebook app for deeplinking
+Changed manifest to allow deep link ad click to open app specific page
+Tested with emulator and device
+Added method to handle deep link data and initiate required page to view
+Tested push notification work flow with intent data
+Tested facebook ad press work flow crash happens
+;16/Aug/18 6:19 PM;zahidul;18000","Tested applied changes in facebook ad press workflow crash happens
+Debugged with logcat to identify the crash which doesn't occurs with the same workflow when push notification is pressed
+Debugged push notification work flow it seems app awakes earlier when push notification is pressed, a service is initiating Home page with statically defined bundles
+Matched bundle key names with push notification work flow and applied for facebook ad work flow
+Tested and still no solution;16/Aug/18 6:24 PM;zahidul;18000","Applied a different logic to load the required page from ad
+
+Added dependency and built app on emulator
+
+Tested with a test app
+
+Exception occurs right after the app home page appears
+
+Added a thread to create a delay before the changePageAccordingToAd method is initiated
+
+Tested in device and emulator doesn’t work
+
+Thread timeout exception occurs;30/Aug/18 4:50 PM;zahidul;10800","Reported issue and discussed with supervisor 
+Changed facebook app settings and changed class name to SplashActivity
+
+Changed manifest configuration for facebook deep linking
+
+Added method to parse ad bundle data in SplashActivity class
+
+Added ad bundle data as extras in MainActivity intent
+
+Tested again and failed
+
+Added more logs to look deep into the push notification workflow
+
+Compared facebook ad deep linking log with push notification log
+
+Find out at some point createFooter() is invoked twice while deeplinking with facebook ad
+
+added condition in getNotification() method of MainActivity and invoked checkAdIntent() method which checks ad intent data and forward bundle to changeSlider() method
+
+Tested and succeeded;03/Sep/18 4:07 PM;zahidul;18000","Defined deep link uri for pages
+
+Checked with push notification configuration and modified checkAdIntent() method according to the link data
+
+Applied separate logic for Promo-deals and FAQ pages;04/Sep/18 5:59 PM;zahidul;10800","Datamixer pager value sets to a blank validity for facebook ad deep linking
+
+Debug the work flow and changed datamixer loading thread waiting time 400 ms;09/Sep/18 11:02 AM;zahidul;1800",,,,,,,,,,0,77400,,,0,77400,,SKTAPP-782,06/Aug/18 10:17 AM;admin;FB app custom audience.PNG;https://skitto.atlassian.net/secure/attachment/10865/FB+app+custom+audience.PNG,06/Aug/18 10:17 AM;admin;FB app custom audience_events_1.PNG;https://skitto.atlassian.net/secure/attachment/10866/FB+app+custom+audience_events_1.PNG,06/Aug/18 10:17 AM;admin;FB app custom audience_events_2.PNG;https://skitto.atlassian.net/secure/attachment/10867/FB+app+custom+audience_events_2.PNG,06/Aug/18 10:17 AM;admin;photo6188100060609357891.jpg;https://skitto.atlassian.net/secure/attachment/10868/photo6188100060609357891.jpg,24/Sep/18 1:49 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/11002/screenshot-1.png,,,,{},,,,,,,,,,,,0|i00cb3:,,,SKTAPP Sprint 17,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,,,,,,,,,,,,,2018-09-06 12:36:15.658,"06/Sep/18 6:36 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/1525d75e7dd8776a30cde7890cc1c2f65222d949]:
+'Facebook Deep linking[SKTAPP-849]'","06/Sep/18 7:00 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/412b45527fb062e93ed6ca4181c8b411d6acdced]:
+'Facebook Deep linking[SKTAPP-849]'","16/Sep/18 12:31 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/0ce9717bca6423ba2a79d5e1b8ac30c8c8158c76]:
+'Facebook Deep linking[SKTAPP-849]'","16/Sep/18 12:31 PM;hasan.m.rahman;[Zahidul Islam|https://gitlab.com/zahidul1] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Android|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Android/commit/331c9eba4fd566d46d1690cefb1fd635b0b354a3]:
+'My Profile, iOS-Android difference[SKTAPP-859]'",16/Sep/18 2:22 PM;flora;Testing is not done yet .,"24/Sep/18 1:52 PM;tasmia.safa;[~zahidul] bhaiya facing problem in  
+
+1.FAQ link 
+screenshot-1.png|thumbnail! 
+
+2.  Data breakdown link does not work. Pressing on the data breakdown add leads to the data dashboard page instead of the data details page like its supposed to. Pressing the ad few times after that leads to the data dashboard page but it shows ""no data what"" view and refreshing it fixes the page.","25/Sep/18 1:57 PM;tasmia.safa;[~zahidul] bhaiya the data breakdown URL should lead to the data details page and the data URL should lead to the data dashboard.
+
+Data breakdown>data details
+Data> Data dashboard","25/Sep/18 2:01 PM;zahidul;[~tasmia.safa] apu the implementation is similar to push notification, as far as I can remember is that push notification deep linking does not take user to data details page for the mentioned keyword. Please check this with [~admin] bhai please.",07/Oct/18 2:52 PM;tasmia.safa;This has been solved in the latest build. ,,,,
+Sales app: Migration page Design to support small screen ,SKTAPP-848,12568,,Task,Done,SKTAPP,Skitto App,software,admin,,,High,Done,nayeem,admin,admin,02/Aug/18 11:27 AM,03/Oct/18 5:58 PM,19/Dec/18 2:00 PM,03/Oct/18 5:58 PM,SalesApp,,0,Design,Retainer,Our Current sales app design was made for for tab. We need to support the design for smaller devices. Please convert the migration page to support small devices.,,admin,nayeem,,,,;12/Sep/18 10:00 AM;nayeem;7200,,,,,,,,,,,,,,,0,7200,,,0,7200,,,12/Sep/18 9:59 AM;nayeem;1_1_migration form.psd;https://skitto.atlassian.net/secure/attachment/10945/1_1_migration+form.psd,12/Sep/18 9:59 AM;nayeem;1_1_migration-form.png;https://skitto.atlassian.net/secure/attachment/10946/1_1_migration-form.png,10/Sep/18 12:43 PM;admin;Screenshot_2018-09-10-12-36-23.jpeg;https://skitto.atlassian.net/secure/attachment/10944/Screenshot_2018-09-10-12-36-23.jpeg,18/Sep/18 3:41 PM;tasmia.safa;screenshot-1.png;https://skitto.atlassian.net/secure/attachment/10967/screenshot-1.png,,,,,{},,,SKTAPP-195,,,,,,,,,0|i00cav:,,,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,,,,,,,,,,,,,,2018-09-12 03:59:49.589,10/Sep/18 12:11 PM;admin;[~nayeem] we need this design urgently.,"12/Sep/18 9:59 AM;nayeem;[^1_1_migration form.psd] !1_1_migration-form.png|thumbnail! 
+
+[~admin]",13/Sep/18 11:57 AM;admin;[~zahidul] pls check the design,24/Sep/18 9:53 AM;admin;[~nayeem] pls update your worklog & close the ticket.,,,,,,,,,
+We need to restrict Emergency loan from app if the subscriber has requested for migration port-out.,SKTAPP-809,12523,,Task,Done,SKTAPP,Skitto App,software,admin,,,Highest,Done,kafi,admin,admin,17/Jul/18 2:12 PM,02/Oct/18 3:42 PM,19/Dec/18 2:00 PM,02/Oct/18 3:42 PM,,,0,Backend,Retainer,"We need to restrict Emergency loan from app if the subscriber has requested for migration port-out. We need to add a validation in the ""request_loan"" API before calling the i-new ""requestLoan"" SOAP API.
+
+So to check the port-out flag status, we need to use the below API:
+
+Model API : https://10.21.3.153:8243/services/mnpService?wsdl
+Production API: https://10.21.7.153:8243/services/mnpService?wsdl
+
+When ""port out flag"" is set as 0 , subscriber is unable to take emergency loan.
+
+{code}
+Check Port-out flag :
+
+<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:end=""http://endpoint.api.mnp.gp.inew.com/"">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <end:checkPortOutInProgressFlag>
+         <!--Optional:-->
+         <request>
+            <!--Optional:-->
+            <mnpRequest>
+               <!--Optional:-->
+               <serviceType>CRM</serviceType>
+               <!--Optional:-->
+               <simIdentifier>
+                  <!--Optional:-->
+                  <msisdn>8801714310289</msisdn>
+               </simIdentifier>
+               <!--Optional:-->
+               <user>tamim</user>
+            </mnpRequest>
+         </request>
+      </end:checkPortOutInProgressFlag>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response :
+
+<soap:Envelope xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">
+   <soap:Body>
+      <ns2:checkPortOutInProgressFlagResponse xmlns:ns2=""http://endpoint.api.mnp.gp.inew.com/"">
+         <return>
+            <portOutStatus>FLAG_SET</portOutStatus>
+            <successIdentificator>
+               <responseCode>0</responseCode>
+               <responseMessage>Check port out flag was successfull</responseMessage>
+               <successIdentifier>OK</successIdentifier>
+            </successIdentificator>
+         </return>
+      </ns2:checkPortOutInProgressFlagResponse>
+   </soap:Body>
+</soap:Envelope>
+{code}
+
+So the logic will be like this
+{code}
+If (migration port out requested)
+ throw an error
+else 
+call the ""requestLoan"" API of i-new
+{code}
+
+",,admin,hasan.m.rahman,kafi,tasmia.safa,,"MNP Checking implemented and code pushed to model server. Checked at model server and it's working. 
+
+Logic: Implemented API response as following by testing 01770168228
+
+SimpleXMLElement Object
+(
+    [portOutStatus] => NA
+    [successIdentificator] => SimpleXMLElement Object
+        (
+            [responseCode] => 8
+            [responseMessage] => Port out process for the specified MSISDN not found
+            [successIdentifier] => FAILED
+        )
+)
+
+Checking responseCode zero or greater. 
+If responseCode greater then zero, considering it's not ported out and go ahead. 
+I have checked by reversing the flag for ported out. NO real case tested.
+
+Process flow
+
+1. 
+Calling getProfile API to pick up MSISDN from subscriber id
+2. 
+Calling MNP checking API with MSISDN to check port out or not
+
+If it's valid, going as it is for loan availability check or request.
+
+
+;25/Jul/18 5:15 PM;kafi;25200",;01/Oct/18 1:59 PM;kafi;18000,,,,,,,,,,,,,,0,43200,,,0,43200,,,,,,,,,,,{},,,SKTAPP-937,,,,,,,,,0|hzzzhp:i,,,SKTAPP Sprint 18,SKTAPP Sprint 19,SKTAPP Sprint 20,SKTAPP Sprint 21,,,,,,,,,,,,,2018-09-16 09:48:46.069,16/Sep/18 3:48 PM;tasmia.safa;Could not check due to model app error. ,18/Sep/18 5:08 PM;tasmia.safa;Has not been solved. Tested several times in both android and iOS.,18/Sep/18 6:42 PM;admin;Sample MSISDN 01701000092,"30/Sep/18 6:56 AM;hasan.m.rahman;[Mohammad Ullah Al Kafi|https://gitlab.com/kafi] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Backend|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Backend/commit/b3c2436ec028aa5228dfebf6f5727a5af92a29d0]:
+'Updated SKTAPP-809. MNP implementation'","01/Oct/18 1:55 PM;hasan.m.rahman;[Mohammad Ullah Al Kafi|https://gitlab.com/kafi] mentioned this issue in [a commit of ErgoV_Team_Skitto/Skitto_Backend|https://gitlab.com/ErgoV_Team_Skitto/Skitto_Backend/commit/e7dbf4f77de2de4ff9918305c672037847d64c96]:
+'Update for SKTAPP-809. Portout number response updated. 017 prefix also removed at this stage'","01/Oct/18 1:59 PM;kafi;MNP issue fixed and two different IP set done at configuration file for different environment
+
+017 prefix removal also added now",02/Oct/18 3:42 PM;tasmia.safa;This issue has been solved in the latest build.,,,,,,
